@@ -3,11 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux'
 
-//import { handleInitialData } from '../src/actions/common'
+import { handleInitialData } from '../src/actions/common'
 
 class App extends Component {
   componentDidMount() {
-    //this.props.dispatch(handleInitialData())
+    this.props.dispatch(handleInitialData())
   }
 
   render() {
