@@ -8,6 +8,65 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.button {
+  text-transform: uppercase;
+  margin: 35px auto;
+  padding: 10px;
+  border: 2px solid rgba(0,0,0,.29);
+  border-radius: 4px;
+  cursor: pointer;
+  background: rgb(175, 225, 238);
+  font-size: 14px;
+  width: 200px;
+  box-shadow: #353232;
+  position: relative;
+}
+
+.login-outline {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  border: 1px solid rgba(0,0,0,.29);
+  border-radius: 6px;
+}
+
+.select-user {
+  float: left;
+  margin: 0 auto 10px auto;
+  flex: 1 100%;
+}
+
+.select-user select {
+  float: right;
+  width: 160px;
+  height: 30px;
+  margin: 20px 0px 10px 10px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.login-span {
+  color: black;
+  font-size: 10dp;
+  text-align:"center";
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-align-center {
+  flex: 100%;
+  margin-top: 25%;
+  transform: translate(0,-100%);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
