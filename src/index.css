@@ -67,6 +67,11 @@ body {
   transform: translate(0,-100%);
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0px 10px 10px 10px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
