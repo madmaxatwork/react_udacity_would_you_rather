@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { handleInitialData } from '../actions/common'
 import Login from './Login'
-import Question from './Question'
+import Nav from './Nav'
+import Question from './Question';
 
 class App extends Component {
 
@@ -14,9 +15,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <Question />
-      </div>
+      <Router>
+        <Fragment>
+          {
+            !this.props.showLogin &&
+            <Nav />
+          }
+          <div className='container'>
+            <div>
+              <Route path='/login' exact component={Login} />
+              <Route path='/' exact component={Question} />
+            </div>
+          </div>
+        </Fragment>
+      </Router>
     );
   }
 }
