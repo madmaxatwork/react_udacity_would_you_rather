@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { login } from '../actions/authedUser'
 
 class Login extends Component {
 	state = {
@@ -20,6 +21,7 @@ class Login extends Component {
 		const { userId } = this.state;
 		const { users } = this.props;
 		const selected = userId ? userId : -1;
+		const avatar = userId ? users[userId].avatarURL : 'emptyuser.jpg';
 
 		return (
 			<div className='login-align-center'>
@@ -28,7 +30,7 @@ class Login extends Component {
 					<span className="login-span">Please select a user and login.</span>
 					<div className='select-user'>
 						<img
-							src='emptyuser.jpg'
+							src={avatar}
 							alt={'emptyuser.jpg'}
 							className='avatar' />
 						<select value={selected} onChange={(event) => this.handleSelectionChanged(event)}>
