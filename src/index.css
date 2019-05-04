@@ -8,6 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.center-align-text {
+  text-align: center;
+}
+
 .button {
   text-transform: uppercase;
   margin: 35px auto;
@@ -91,3 +95,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.question {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0px 10px 10px 10px;
+  border: 2px solid rgba(0,0,0,.29);
+  border-radius: 6px;
+}
+
+ .options {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+ .options > div {
+  width: 42%;
+  max-width: 250px;
+  padding: 10px;
+  border: 2px solid rgba(0,0,0,.29);
+  border-radius: 6px;
+}
+
+ .selected {
+  border: 2px solid rgba(0,0,0,.29);
+  background-color:rgb(175, 225, 238);
+  border-radius: 6px;
+}
+
+
+ .options > div:hover {
+  border: 2px solid rgba(0,0,0,.29);
+  background-color:rgb(175, 225, 238);
+  border-radius: 6px;
+ }
