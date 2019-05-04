@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
 import { connect } from 'react-redux'
 
-import { handleInitialData } from '../src/actions/common'
-import Login from './components/Login'
+import { handleInitialData } from '../actions/common'
+import Login from '../components/Login'
 
 class App extends Component {
   componentDidMount() {
