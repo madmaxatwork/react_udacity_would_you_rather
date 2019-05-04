@@ -76,20 +76,7 @@ body {
   padding: 0px 10px 10px 10px;
 }
 
-.nav-user-image {
-  height: 35px;
-  border-radius: 25px;
-  margin: 0px;
-  margin-right: 10px;
-  align-content: center;
-}
 
-.nav li.user {
-  margin-right: 20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -132,3 +119,41 @@ code {
   background-color:rgb(175, 225, 238);
   border-radius: 6px;
  }
+
+ .nav {
+  top: 0px;
+  width: 100%;
+  background-color: rgba(175, 225, 238);
+}
+
+.nav ul {
+  margin: 0 auto;
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
+}
+
+.nav li {
+  width: 100%;
+  max-width: 200px;
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+}
+
+.nav-user-image {
+  height: 35px;
+  border-radius: 25px;
+  margin: 0px;
+  margin-right: 10px;
+  align-content: center;
+}
+
+.nav li.user {
+  margin-right: 20px;
+  display: flex;
+  justify-self: end;
+  justify-content: flex-end;
+  align-items: center;
+}
