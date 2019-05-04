@@ -72,6 +72,21 @@ body {
   padding: 0px 10px 10px 10px;
 }
 
+.nav-user-image {
+  height: 35px;
+  border-radius: 25px;
+  margin: 0px;
+  margin-right: 10px;
+  align-content: center;
+}
+
+.nav li.user {
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
