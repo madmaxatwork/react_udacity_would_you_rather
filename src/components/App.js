@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { handleInitialData } from '../actions/common'
 import Login from './Login'
 import Nav from './Nav'
-import Question from './Question';
+import Dashboard from './Dashboard';
 
 class App extends Component {
 
@@ -24,7 +24,7 @@ class App extends Component {
           <div className='container'>
             <div>
               <Route path='/login' exact component={Login} />
-              <Route path='/' exact component={Question} />
+              <Route path='/' exact component={Dashboard} />
             </div>
           </div>
         </Fragment>

@@ -1,31 +1,25 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
 
+class Question extends Component {
 
- class Question extends Component {
-
- 	render() {
-		if (!this.props.authedUser) {
-            return <Redirect to={{
-                pathname: '/login',
-                state: {
-                    returnPath: '/'
-                }
-            }} />
-        }
-
+	render() {
+		const { authedUser, question, users, id } = this.props
+		const avatarURL = users[question.author].avatarURL;
 
 		return (
 			<div className='question'>
-				<p className='center-align-text'>Author Name</p>
-				<p className='center-align-text'>Would you rather...</p>
+				<ul>
+					<img src={avatarURL} alt='emptyuser.jpg' className='nav-user-image'/>
+					<span className='nav-user-name'>Asked By : {question.author}</span>
+				</ul>
+				<p className='center-align-text-bold'>Would you rather...</p>
 				<div className='options'>
 					<div className='option-one'>
-						<p className='center-align-text'>Be a car?</p>
+						<p className='center-align-text'>{question.optionOne.text}</p>
 					</div>
 					<div className='option-two'>
-						<p className='center-align-text'>Be a plane?</p>
+						<p className='center-align-text'>{question.optionTwo.text}</p>
 					</div>
 				</div>
 			</div>
@@ -33,11 +27,15 @@ import { Redirect } from 'react-router-dom'
 	}
 }
 
-function mapStateToProps({ authedUser }) {
+function mapStateToProps({ questions, users, authedUser }, { id }) {
 	return {
-		authedUser
+		question: questions[id],
+		optionOneSelected: questions[id].optionOne.votes.indexOf(authedUser) > -1,
+		optionTwoSelected: questions[id].optionTwo.votes.indexOf(authedUser) > -1,
+		authedUser,
+		users
 	}
 }
 
 
- export default connect(mapStateToProps)(Question) 
+export default connect(mapStateToProps)(Question) 
