@@ -1,4 +1,4 @@
-import { getInitialData } from '../utils/accessApi'
+import { getInitialData, saveQuestion } from '../utils/accessApi'
 
  //Creators
 import { receiveUsers } from './users'
@@ -14,3 +14,7 @@ export function handleInitialData() {
 			})
 	}
 }
+
+export function handleSaveQuestion(question) {
+    return saveQuestion(question)
+  }
