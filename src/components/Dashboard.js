@@ -33,10 +33,10 @@ class Dashboard extends Component {
                     {
                         this.state.answeredSelected
                             ? this.props.answeredQuestionIds.map((id) => (
-                                <li key={id}><Question id={id} /></li>
+                                <ul key={id}><Question id={id} /></ul>
                             ))
                             : this.props.unansweredQuestionIds.map((id) => (
-                                <li key={id}><Question id={id} /></li>
+                                <ul key={id}><Question id={id} /></ul>
                             ))
                     }
                 </ul>
