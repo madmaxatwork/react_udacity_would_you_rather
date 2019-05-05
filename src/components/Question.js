@@ -9,9 +9,9 @@ class Question extends Component {
 
 		return (
 			<div className='question'>
-				<ul>
+				<ul className='question-user-details'>
 					<img src={avatarURL} alt='emptyuser.jpg' className='nav-user-image'/>
-					<span className='nav-user-name'>Asked By : {question.author}</span>
+					<span className='nav-user-name'><b>Asked by:</b> : {question.author}</span>
 				</ul>
 				<p className='center-align-text-bold'>Would you rather...</p>
 				<div className='options'>

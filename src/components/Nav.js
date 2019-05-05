@@ -12,17 +12,17 @@ class Nav extends Component {
     dispatch(logout());
   }
 
-  render () {
+  render() {
     return (
       <nav className='nav'>
         <ul>
-        <li>
+          <li>
             <NavLink to='/' exact activeClassName='active'>
               Questions
             </NavLink>
           </li>
           <li>
-            <NavLink to='/' exact activeClassName='active'>
+            <NavLink to='/leaderboard' exact activeClassName='active'>
               Leaderboard
             </NavLink>
           </li>
@@ -32,11 +32,11 @@ class Nav extends Component {
             </NavLink>
           </li>
           <li className='user'>
-          <img src={this.props.avatarURL} alt='emptyuser.jpg' className='nav-user-image'/>
-          <span onClick={this.handleLogout}><IoIosLogOut size={20}/></span>
+            <img src={this.props.avatarURL} alt='emptyuser.jpg' className='nav-user-image' />
+            <span onClick={this.handleLogout}><IoIosLogOut size={20} /></span>
           </li>
         </ul>
-        <hr/>
+        <hr />
       </nav>
     )
   }

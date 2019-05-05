@@ -6,6 +6,8 @@ import { handleInitialData } from '../actions/common'
 import Login from './Login'
 import Nav from './Nav'
 import Dashboard from './Dashboard';
+import Leaderboard from './Leaderboard'
+
 
 class App extends Component {
 
@@ -25,6 +27,7 @@ class App extends Component {
             <div>
               <Route path='/login' exact component={Login} />
               <Route path='/' exact component={Dashboard} />
+              <Route path='/leaderboard' exact component={Leaderboard} />
             </div>
           </div>
         </Fragment>

@@ -107,6 +107,13 @@ code {
   background-color:rgb(252, 249, 252);
 }
 
+.question-user-details{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center
+}
+
  .options {
   width: 100%;
   display: flex;
@@ -224,4 +231,36 @@ code {
 
 .btn .active {
   background: rgb(175, 225, 238);
+}
+
+
+
+.leaderboard {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center
+}
+
+.leaderboard-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.leaderboard-user-details {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: auto
+}
+
+.leaderboard-user-stats {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly
 }
