@@ -36,7 +36,6 @@ class Nav extends Component {
             <span onClick={this.handleLogout}><IoIosLogOut size={20} /></span>
           </li>
         </ul>
-        <hr />
       </nav>
     )
   }

@@ -8,6 +8,7 @@ import Nav from './Nav'
 import Dashboard from './Dashboard';
 import Leaderboard from './Leaderboard'
 import NewQuestion from './NewQuestion'
+import QuestionStats from './QuestionStats.js'
 
 
 class App extends Component {
@@ -30,6 +31,7 @@ class App extends Component {
               <Route path='/' exact component={Dashboard} />
               <Route path='/leaderboard' exact component={Leaderboard} />
               <Route path='/add' exact component={NewQuestion} />
+              <Route path='/questions/:id' component={QuestionStats} />
             </div>
           </div>
         </Fragment>
