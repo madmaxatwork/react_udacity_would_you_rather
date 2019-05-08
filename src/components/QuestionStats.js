@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Question from './Question';
+import { Redirect } from 'react-router-dom'
 
 
 class QuestionStats extends Component {
 	render() {
+
+		if (!this.props.authedUser) {
+			return <Redirect to={{
+				pathname: '/login',
+				state: {
+					returnPath: '/'
+				}
+			}} />
+		}
+
 		const { question, id } = this.props
 		const votesOptionOne = question.optionOne.votes.length;
 		const votesOptionTwo = question.optionTwo.votes.length;
@@ -19,18 +30,19 @@ class QuestionStats extends Component {
 				}
 				<div className='question-stats'>
 					<span>Total Votes {votesTotal}</span>
-					<span>Percent Votes Option One {percentVotesOptionOne}</span>
-					<span>percent Votes Option Two {percentVotesOptionTwo}</span>
+					<span>{percentVotesOptionOne ? 'Percent Votes Option One ' + percentVotesOptionOne : ''}</span>
+					<span>{percentVotesOptionTwo ? 'Percent Votes Option Two ' + percentVotesOptionTwo : ''}</span>
 				</div>
 			</div>
 		)
 	}
 }
 
-function mapStateToProps({ questions}, props) {
+function mapStateToProps({ questions, authedUser}, props) {
 	const { id } = props.match.params
 	return {
 		question: questions[id] ? questions[id] : null,
+		authedUser,
 		id
 	}
 }

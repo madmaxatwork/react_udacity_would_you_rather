@@ -9,9 +9,9 @@ class Dashboard extends Component {
     }
     toggleAnswered = (e, answeredSelected) => {
         e.preventDefault()
-        this.setState(() => ({
+        this.setState({
             answeredSelected
-        }))
+        })
     }
 
     render() {
@@ -33,10 +33,10 @@ class Dashboard extends Component {
                     {
                         this.state.answeredSelected
                             ? this.props.answeredQuestionIds.map((id) => (
-                                <ul key={id}><Question id={id} /></ul>
+                                <li key={id}><Question id={id} /></li>
                             ))
                             : this.props.unansweredQuestionIds.map((id) => (
-                                <ul key={id}><Question id={id} /></ul>
+                                <li key={id}><Question id={id} /></li>
                             ))
                     }
                 </ul>

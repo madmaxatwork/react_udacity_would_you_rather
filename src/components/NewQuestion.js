@@ -52,12 +52,12 @@ class NewQuestion extends Component {
                 <h3 className='center-align-text-bold'>Would you rather...</h3>
                 <form className='new-question-form' onSubmit={(e) => this.handleAddQuestion(e, optionOne, optionTwo)}>
                     <div className='new-question-options'>
-                        <input
+                        <textarea
                             className='input'
                             placeholder='Option One'
                             value={optionOne}
                             onChange={(event) => this.handleChange(event, 1)}/>
-                        <input
+                        <textarea
                             className='input'
                             placeholder='Option Two'
                             value={optionTwo}

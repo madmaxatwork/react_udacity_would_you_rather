@@ -51,10 +51,10 @@ class Question extends Component {
 				</ul>
 				<p className='center-align-text-bold'>Would you rather...</p>
 				<div className='options'>
-					<div className='answered' onClick={(event) => this.handleOptionClicked(event, 1)}>
+					<div className={this.props.optionOneSelected ? 'active':''} onClick={(event) => this.handleOptionClicked(event, 1)}>
 						<p className='center-align-text'>{question.optionOne.text}</p>
 					</div>
-					<div className='option-two' onClick={(event) => this.handleOptionClicked(event, 2)}>
+					<div className={this.props.optionTwoSelected ? 'active':''} onClick={(event) => this.handleOptionClicked(event, 2)}>
 						<p className='center-align-text'>{question.optionTwo.text}</p>
 					</div>
 				</div>
@@ -65,7 +65,7 @@ class Question extends Component {
 
 function mapStateToProps({ questions, users, authedUser }, { id, disableLink }) {
 	const question = questions[id];
-	const answers = Object.keys(users[authedUser].answers);
+	const answers = authedUser ? Object.keys(users[authedUser].answers) : [];
 	const answered = answers.indexOf(question.id) > -1 ? true : false;
 
 	return {

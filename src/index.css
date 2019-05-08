@@ -8,8 +8,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+ul,li{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px
+}
+
+.active {
+  background: rgb(175, 225, 238);
+}
+
 .center-align-text {
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .center-align-text-bold{
@@ -121,7 +132,7 @@ code {
   justify-content: space-evenly;
 }
 
- .options > div {
+ .options > div,textarea {
   width: 42%;
   max-width: 250px;
   padding: 10px;
@@ -230,7 +241,7 @@ code {
   outline: 0;
 }
 
-.btn .active {
+.btn.active {
   background: rgb(175, 225, 238);
 }
 
