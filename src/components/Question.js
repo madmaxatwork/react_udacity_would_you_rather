@@ -33,7 +33,7 @@ class Question extends Component {
 	render() {
 		const { question, users } = this.props
 		const avatarURL = users[question.author].avatarURL;
-		
+
 		if (this.state.questionStats) {
 			return <Redirect to={{
 				pathname: `/questions/${this.props.id}`,
@@ -51,10 +51,10 @@ class Question extends Component {
 				</ul>
 				<p className='center-align-text-bold'>Would you rather...</p>
 				<div className='options'>
-					<div className={this.props.optionOneSelected ? 'active':''} onClick={(event) => this.handleOptionClicked(event, 1)}>
+					<div className={this.props.optionOneSelected ? 'active' : ''} onClick={(event) => this.handleOptionClicked(event, 1)}>
 						<p className='center-align-text'>{question.optionOne.text}</p>
 					</div>
-					<div className={this.props.optionTwoSelected ? 'active':''} onClick={(event) => this.handleOptionClicked(event, 2)}>
+					<div className={this.props.optionTwoSelected ? 'active' : ''} onClick={(event) => this.handleOptionClicked(event, 2)}>
 						<p className='center-align-text'>{question.optionTwo.text}</p>
 					</div>
 				</div>

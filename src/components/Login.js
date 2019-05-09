@@ -39,8 +39,7 @@ class Login extends Component {
 		const selected = userId ? userId : -1;
 		const avatar = userId ? users[userId].avatarURL : 'emptyuser.jpg';
 
-		if (this.state.userId && this.state.userloggedin)
-		{
+		if (this.state.userId && this.state.userloggedin) {
 			return <Redirect to={this.props.location.state.returnPath} />
 		}
 

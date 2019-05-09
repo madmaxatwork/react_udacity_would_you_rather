@@ -38,7 +38,7 @@ class QuestionStats extends Component {
 	}
 }
 
-function mapStateToProps({ questions, authedUser}, props) {
+function mapStateToProps({ questions, authedUser }, props) {
 	const { id } = props.match.params
 	return {
 		question: questions[id] ? questions[id] : null,

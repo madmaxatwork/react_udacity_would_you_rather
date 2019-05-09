@@ -15,16 +15,16 @@ export default function questions(state = {}, action) {
         ...action.questions,
       };
     case ADD_ANSWER:
-    return {
-      ...state,
-      [action.id]: {
-        ...state[action.id],
-        [action.answer]: {
-          ...state[action.id][action.answer],
-          votes: state[action.id][action.answer].votes.concat(action.authedUser),
+      return {
+        ...state,
+        [action.id]: {
+          ...state[action.id],
+          [action.answer]: {
+            ...state[action.id][action.answer],
+            votes: state[action.id][action.answer].votes.concat(action.authedUser),
+          },
         },
-      },
-    };
+      };
     default:
       return state;
   }

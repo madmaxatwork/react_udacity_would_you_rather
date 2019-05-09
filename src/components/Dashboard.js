@@ -26,8 +26,8 @@ class Dashboard extends Component {
         return (
             <div className='questions-list'>
                 <div className='btn-list-group'>
-                    <button className={this.state.answeredSelected ? 'btn':'btn active'} onClick={(e) => this.toggleAnswered(e, false)}>Unanswered</button>
-                    <button className={this.state.answeredSelected ? 'btn active':'btn'} onClick={(e) => this.toggleAnswered(e, true)}>Answered</button>
+                    <button className={this.state.answeredSelected ? 'btn' : 'btn active'} onClick={(e) => this.toggleAnswered(e, false)}>Unanswered</button>
+                    <button className={this.state.answeredSelected ? 'btn active' : 'btn'} onClick={(e) => this.toggleAnswered(e, true)}>Answered</button>
                 </div>
                 <ul>
                     {

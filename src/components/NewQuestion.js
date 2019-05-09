@@ -10,14 +10,14 @@ class NewQuestion extends Component {
         gotoLogin: false
     }
 
-    handleChange = function(event, optionIndex) {
+    handleChange = function (event, optionIndex) {
         const text = event.target.value;
-        this.setState(function(previousState) {
-          return optionIndex === 1
-            ? { ...previousState, optionOne: text }
-            : { ...previousState, optionTwo: text };
+        this.setState(function (previousState) {
+            return optionIndex === 1
+                ? { ...previousState, optionOne: text }
+                : { ...previousState, optionTwo: text };
         });
-      }
+    }
 
     handleAddQuestion = (e, optionOne, optionTwo) => {
         e.preventDefault()
@@ -56,12 +56,12 @@ class NewQuestion extends Component {
                             className='input'
                             placeholder='Option One'
                             value={optionOne}
-                            onChange={(event) => this.handleChange(event, 1)}/>
+                            onChange={(event) => this.handleChange(event, 1)} />
                         <textarea
                             className='input'
                             placeholder='Option Two'
                             value={optionTwo}
-                            onChange={(event) => this.handleChange(event, 2)}/>
+                            onChange={(event) => this.handleChange(event, 2)} />
                     </div>
                     <button
                         className='button'
