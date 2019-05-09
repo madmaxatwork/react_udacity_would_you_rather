@@ -1,10 +1,24 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Would You Rather Project
+**Programming assignment for the [Udacity React Nanodegree](https://www.udacity.com/course/react-nanodegree--nd019) program.**
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+Installs all necessary modules to run the current project.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+$ yarn install
+```
+
+## Development
+
+Runs development server, with live reloading, on http://localhost:3000.
+
+```bash
+$ yarn start
+```
+
+## License
+
+This project is licensed under the MIT License. Check the `LICENSE` file.
