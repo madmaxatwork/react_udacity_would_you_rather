@@ -30,6 +30,8 @@ class QuestionStats extends Component {
 				}
 				<div className='question-stats'>
 					<span>Total Votes {votesTotal}</span>
+					<span>{votesOptionOne ? 'Total Votes for option One ' + votesOptionOne : ''}</span>
+					<span>{votesOptionTwo ? 'Total Votes for option Two ' + votesOptionTwo : ''}</span>
 					<span>{percentVotesOptionOne ? 'Percent Votes Option One ' + percentVotesOptionOne : ''}</span>
 					<span>{percentVotesOptionTwo ? 'Percent Votes Option Two ' + percentVotesOptionTwo : ''}</span>
 				</div>
